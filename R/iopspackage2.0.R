@@ -49,7 +49,7 @@
 #' @return A list that constains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
 #' @export
 
-IOPS <- function(CountryCode ,tradeData , ComplexMethod = "eigenvalues", iterCompl = 20, GVCMapping, tradedigit = 6){
+IOPS <- function(CountryCode ,tradeData , ComplexMethod = "eigenvalues", iterCompl = 20, GVCMapping = NULL, tradedigit = 6){
 
   #Assign empty variables
   country_code <- NA
@@ -162,7 +162,7 @@ IOPS <- function(CountryCode ,tradeData , ComplexMethod = "eigenvalues", iterCom
 
   tradeData2018 <- MergedTradeData[,c("year","export_value","location_code","hs_product_code")]
 
-  message("Trade data succesfully imported")
+  message("Trade data successfully imported")
 
   #-----------------------------------------------------------------------------
 
