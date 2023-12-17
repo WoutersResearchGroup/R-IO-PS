@@ -2,7 +2,7 @@ Package: iopspackage
 Type: Package
 Title: IO-PS Framework Package
 Version: 2.1.0
-Date: 2023-11-09
+Date: 2023-12-17
 Author: Stellenbosch University Industrial Research Group
 Maintainer: C.J Pieterse <pietie.cjp.1908@gmail.com>
 Description: Developmental R code related to the input-output product space (IO-PS).
@@ -14,12 +14,9 @@ Description: Developmental R code related to the input-output product space (IO-
 Imports:
     dplyr,
     economiccomplexity,
-    openxlsx,
     readxl,
     tidyr,
-    usethis,
-    roxygen2,
-    tibble
+    openxlsx
 Suggests: testthat
 LazyData: true
 License: GPL-3
