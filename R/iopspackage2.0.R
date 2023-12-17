@@ -3,15 +3,17 @@
 #' @description  Takes user inputted trade data, any acceptable ISO country code and industrial value chain mapping to calculate various metrics (Economic- and Product complexity metrics, distance metrics, opportunity gain, and inequality metrics) of a given country in order to facilitate better decision making regarding industrial policymaking.
 #'
 #' @import dplyr
-#' @import Rcpp
 #' @import tidyr
 #' @import readxl
-#' @import usethis
 #' @import economiccomplexity
-#' @import roxygen2
 #' @importFrom stats aggregate
 #' @importFrom utils write.csv
 #' @importFrom utils read.csv
+#' @importFrom openxlsx createWorkbook 
+#' @importFrom openxlsx addWorksheet 
+#' @importFrom openxlsx writeData
+#' @importFrom openxlsx saveWorkbook 
+#'
 #'
 #' @param CountryCode (Type: character/integer) Any accepted ISO country code could be used, e.g. \code{"United Kingdom"}, \code{"GBR"}, \code{"GB"}, \code{828} would all be accepted if the United Kingdom is the desired country. This version of the package uses country_codes_V202201 from th BACI Hs17 2020 dataset, but can be changed in \code{inst/extdata}.
 #' @param tradeData (Type: csv) Accepts any CEPII BACI trade data. NOTE: tradeData and GVCMapping must be from the same "H" Family, e.g. both are from  H3, etc., in order for the program to work correctly.
@@ -22,7 +24,7 @@
 #'
 #' @examples
 #' # Load the example data
-#' ExampleTradeData <- read.csv(system.file("extdata", "ExampleTradeData.csv", package = "iopspackage"))
+#' ExampleTradeData <- read.csv(system.file("extdata","ExampleTradeData.csv",package="iopspackage"))
 #'
 #' # Create a temporary directory
 #' temp_dir <- tempfile()
