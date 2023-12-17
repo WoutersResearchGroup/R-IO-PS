@@ -1,26 +1,3 @@
-
-#requireNamespace("roxygen2")
-requireNamespace("Rcpp")
-requireNamespace("dplyr")
-requireNamespace("tidyr")
-#requireNamespace("readxl")
-requireNamespace("economiccomplexity")
-requireNamespace("usethis")
-requireNamespace("Matrix")
-requireNamespace("tibble")
-requireNamespace("openxlsx")
-requireNamespace("utils")
-#requireNamespace("stats")
-
-library("Rcpp")
-library("tidyr")
-library("dplyr")
-library("readxl")
-library("economiccomplexity")
-library("usethis")
-library("roxygen2")
-library("openxlsx")
-
 #' IOPS
 #'
 #' @description  Takes user inputted trade data, any acceptable ISO country code and industrial value chain mapping to calculate various metrics (Economic- and Product complexity metrics, distance metrics, opportunity gain, and inequality metrics) of a given country in order to facilitate better decision making regarding industrial policymaking.
@@ -44,12 +21,12 @@ library("openxlsx")
 #' @param tradedigit (Type: integer) Indicate if the raw trade digit summation should be done on a 6- or 4-digit level. Defaults to tradedigit = 6.
 #'
 #' @examples
-#' \dontrun{
 #' # Load the example data
 #' ExampleTradeData <- read.csv(system.file("extdata", "ExampleTradeData.csv", package = "iopspackage"))
 #'
 #' # Create a temporary directory
-#' temp_dir <- tempdir()
+#' temp_dir <- tempfile()
+#' dir.create(temp_dir)
 #'
 #' # Set the working directory to the temporary directory
 #' old_dir <- setwd(temp_dir)
@@ -59,7 +36,7 @@ library("openxlsx")
 #'   CountryCode = 710,
 #'   tradeData = ExampleTradeData,
 #'   ComplexMethod = "reflections",
-#'   iterCompl = 20,
+#'   iterCompl = 5,
 #'   GVCMapping = NULL,
 #'   tradedigit = 6
 #' )
@@ -67,12 +44,6 @@ library("openxlsx")
 #' # Clean up the temporary directory
 #'   setwd(old_dir)  # Restore the original working directory
 #'   unlink(temp_dir, recursive = TRUE)
-#' 
-#'   #If needed, remove the MiKTeX-related file
-#'   if (file.exists("lastMiKTeXException")) {
-#'      unlink("lastMiKTeXException")
-#'   }
-#' }
 #'
 #'
 #' @return A list that constains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
