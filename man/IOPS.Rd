@@ -9,7 +9,7 @@ IOPS(
   tradeData,
   ComplexMethod = "eigenvalues",
   iterCompl = 20,
-  GVCMapping,
+  GVCMapping = NULL,
   tradedigit = 6
 )
 }
@@ -57,8 +57,8 @@ IOPS(
   CountryCode = 710,
   tradeData = ExampleTradeData,
   ComplexMethod = "fitness",
-  iterCompl = 20,
-  GVCMapping = ExampleValueChain,
+  iterCompl = 5,
+  GVCMapping = NULL,
   tradedigit = 6
 )
 }
