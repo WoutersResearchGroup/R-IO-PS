@@ -27,7 +27,7 @@ IOPS(
 \item{tradedigit}{(Type: integer) Indicate if the raw trade digit summation should be done on a 6- or 4-digit level. Defaults to tradedigit = 6.}
 }
 \value{
-A list that constains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
+A list that constrains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
 }
 \description{
 Takes user inputted trade data, any acceptable ISO country code and industrial value chain mapping to calculate various metrics (Economic- and Product complexity metrics, distance metrics, opportunity gain, and inequality metrics) of a given country in order to facilitate better decision making regarding industrial policymaking.
@@ -48,7 +48,7 @@ IOPS(
   CountryCode = 710,
   tradeData = ExampleTradeData,
   ComplexMethod = "reflections",
-  iterCompl = 5,
+  iterCompl = 6,
   GVCMapping = NULL,
   tradedigit = 6
 )

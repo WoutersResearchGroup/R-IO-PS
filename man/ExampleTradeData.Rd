@@ -16,7 +16,7 @@ A data frame with 137178 rows and 6 variables:
 }
 }
 \source{
-\url{http://www.cepii.fr/cepii/en/bdd_modele/presentation.asp?id=37}
+\url{http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37}
 }
 \usage{
 ExampleTradeData

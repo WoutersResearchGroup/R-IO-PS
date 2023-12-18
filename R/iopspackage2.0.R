@@ -25,20 +25,20 @@
 #' @examples
 #' # Load the example data
 #' ExampleTradeData <- read.csv(system.file("extdata","ExampleTradeData.csv",package="iopspackage"))
-#'
+#' 
 #' # Create a temporary directory
 #' temp_dir <- tempfile()
 #' dir.create(temp_dir)
-#'
+#' 
 #' # Set the working directory to the temporary directory
 #' old_dir <- setwd(temp_dir)
-#' 
+#'
 #' # Then use it in your function
 #' IOPS(
 #'   CountryCode = 710,
 #'   tradeData = ExampleTradeData,
 #'   ComplexMethod = "reflections",
-#'   iterCompl = 5,
+#'   iterCompl = 6,
 #'   GVCMapping = NULL,
 #'   tradedigit = 6
 #' )
@@ -48,7 +48,7 @@
 #'   unlink(temp_dir, recursive = TRUE)
 #'
 #'
-#' @return A list that constains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
+#' @return A list that constrains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
 #' @export
 
 IOPS <- function(CountryCode ,tradeData , ComplexMethod = "eigenvalues", iterCompl = 20, GVCMapping = NULL, tradedigit = 6){

@@ -11,5 +11,5 @@
 #'   \item{v}{Value of the trade flow, in thousands current USD}
 #'   \item{q}{Quantity, in metric tons}
 #' }
-#' @source \url{http://www.cepii.fr/cepii/en/bdd_modele/presentation.asp?id=37}
+#' @source \url{http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37}
 "ExampleTradeData"
