@@ -33,6 +33,8 @@ A list that constrains ECI, PCI, Opportunity_Gain, distance, density, M_absolute
 Takes user inputted trade data, any acceptable ISO country code and industrial value chain mapping to calculate various metrics (Economic- and Product complexity metrics, distance metrics, opportunity gain, and inequality metrics) of a given country in order to facilitate better decision making regarding industrial policymaking.
 }
 \examples{
+\dontrun{
+\donttest{
 
 # Create a temporary directory
 temp_dir <- tempfile()
@@ -46,7 +48,7 @@ IOPS(
   CountryCode = 710,
   tradeData = ExampleTradeData,
   ComplexMethod = "reflections",
-  iterCompl = 6,
+  iterCompl = 2,
   GVCMapping = NULL,
   tradedigit = 6
 )
@@ -55,5 +57,7 @@ IOPS(
   setwd(old_dir)  # Restore the original working directory
   unlink(temp_dir, recursive = TRUE)
 
+}
+}
 
 }

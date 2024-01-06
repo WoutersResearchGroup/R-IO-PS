@@ -24,6 +24,8 @@
 #' @param tradedigit (Type: integer) Indicate if the raw trade digit summation should be done on a 6- or 4-digit level. Defaults to tradedigit = 6.
 #'
 #' @examples
+#' \dontrun{
+#' \donttest{
 #' 
 #' # Create a temporary directory
 #' temp_dir <- tempfile()
@@ -37,7 +39,7 @@
 #'   CountryCode = 710,
 #'   tradeData = ExampleTradeData,
 #'   ComplexMethod = "reflections",
-#'   iterCompl = 6,
+#'   iterCompl = 2,
 #'   GVCMapping = NULL,
 #'   tradedigit = 6
 #' )
@@ -45,7 +47,9 @@
 #' # Clean up the temporary directory
 #'   setwd(old_dir)  # Restore the original working directory
 #'   unlink(temp_dir, recursive = TRUE)
-#'
+#' 
+#' }
+#' }
 #'
 #' @return A list that constrains ECI, PCI, Opportunity_Gain, distance, density, M_absolute, M_binary, Tier_Results, Product_Category_Results, Product_Results, respectively.
 #' @export
